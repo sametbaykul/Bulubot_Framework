@@ -1,0 +1,24 @@
+#VRML_OBJ R2019a utf8
+DEF BALL Solid {
+  translation 0 0.30000000000000004 -0.2
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "textures/red_brick_wall.jpg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry DEF GEO_BALL Sphere {
+        radius 0.05
+        subdivision 2
+      }
+    }
+  ]
+  boundingObject USE GEO_BALL
+  physics Physics {
+  }
+}

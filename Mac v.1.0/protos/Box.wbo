@@ -1,0 +1,8 @@
+#VRML_OBJ R2019a utf8
+DEF BOX WoodenBox {
+  translation -0.09468104596631255 0.05 0.2287512556816944
+  rotation 0 -1 0 0.35342917352885356
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+  mass 0.2
+}

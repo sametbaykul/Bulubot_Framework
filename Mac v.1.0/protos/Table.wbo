@@ -1,0 +1,216 @@
+#VRML_OBJ R2019a utf8
+DEF TABLE Solid {
+  translation 0 -0.016 0
+  children [
+    Group {
+      children [
+        Solid {
+          children [
+            DEF GROUP_TableBoundary Group {
+              children [
+                Transform {
+                  translation 0 0.055 0.295
+                  children [
+                    Shape {
+                      appearance PBRAppearance {
+                        roughness 1
+                        metalness 0
+                      }
+                      geometry Box {
+                        size 1.2 0.08 0.01
+                      }
+                    }
+                  ]
+                }
+                Transform {
+                  translation 0 0.055 -0.295
+                  children [
+                    Shape {
+                      appearance PBRAppearance {
+                        roughness 1
+                        metalness 0
+                      }
+                      geometry Box {
+                        size 1.2 0.08 0.01
+                      }
+                    }
+                  ]
+                }
+                Transform {
+                  translation -0.595 0.055 0
+                  children [
+                    Shape {
+                      appearance PBRAppearance {
+                        roughness 1
+                        metalness 0
+                      }
+                      geometry Box {
+                        size 0.01 0.08 0.58
+                      }
+                    }
+                  ]
+                }
+                Transform {
+                  translation 0.595 0.055 0
+                  children [
+                    Shape {
+                      appearance PBRAppearance {
+                        roughness 1
+                        metalness 0
+                      }
+                      geometry Box {
+                        size 0.01 0.08 0.58
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          boundingObject USE GROUP_TableBoundary
+          physics Physics {
+          }
+        }
+        Transform {
+          translation -0.55 -0.36 -0.25
+          children [
+            Transform {
+              translation 0 -0.35 0
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0 0 0
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Cylinder {
+                    height 0.01
+                    radius 0.037
+                  }
+                  castShadows FALSE
+                }
+              ]
+            }
+            Shape {
+              appearance PBRAppearance {
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Cylinder {
+                height 0.7
+                radius 0.036
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.55 -0.36 -0.25
+          children [
+            Transform {
+              translation 0 -0.35 0
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0 0 0
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Cylinder {
+                    height 0.01
+                    radius 0.037
+                  }
+                  castShadows FALSE
+                }
+              ]
+            }
+            Shape {
+              appearance PBRAppearance {
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Cylinder {
+                height 0.7
+                radius 0.036
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.55 -0.36 0.25
+          children [
+            Transform {
+              translation 0 -0.35 0
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0 0 0
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Cylinder {
+                    height 0.01
+                    radius 0.037
+                  }
+                  castShadows FALSE
+                }
+              ]
+            }
+            Shape {
+              appearance PBRAppearance {
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Cylinder {
+                height 0.7
+                radius 0.036
+              }
+            }
+          ]
+        }
+        Transform {
+          translation -0.55 -0.36 0.25
+          children [
+            Transform {
+              translation 0 -0.35 0
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0 0 0
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Cylinder {
+                    height 0.01
+                    radius 0.037
+                  }
+                  castShadows FALSE
+                }
+              ]
+            }
+            Shape {
+              appearance PBRAppearance {
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Cylinder {
+                height 0.7
+                radius 0.036
+              }
+            }
+          ]
+        }
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.9 0.9 0.9
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 1.2 0.03 0.6
+          }
+        }
+      ]
+    }
+  ]
+  name "IKEA Table"
+}

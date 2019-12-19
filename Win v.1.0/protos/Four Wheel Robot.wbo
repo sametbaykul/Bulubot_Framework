@@ -1,0 +1,161 @@
+#VRML_OBJ R2019a utf8
+Robot {
+  translation 0.35664797006500304 0.03999999999999878 0.17822660040545457
+  children [
+    DEF ROBOT_BODY Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 0.2 0.05 0.07
+      }
+    }
+    DEF DS_R DistanceSensor {
+      translation -0.1 0.01 -0.019999999999999997
+      rotation 0 -0.9999999999999999 0 3.4033920597693803
+      children [
+        Shape {
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+      name "DS_R"
+    }
+    DEF DS_L DistanceSensor {
+      translation -0.1 0.01 0.02
+      rotation 0 -1 0 2.8797932857693804
+      children [
+        Shape {
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+      name "DS_L"
+    }
+    DEF WHEEL_FL HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 0 1
+        anchor -0.060000000000000005 0 0.05
+        staticFriction 1
+      }
+      device [
+        RotationalMotor {
+          name "RM_FL"
+        }
+      ]
+      endPoint Solid {
+        translation -0.06 -7.889662390070384e-07 0.050000000000000044
+        rotation 1 0 0 1.5707963028204153
+        children [
+          DEF TRANSFORM_WHEEL_1 Transform {
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0.1 0.1 0.1
+                  roughness 1
+                  metalness 0
+                }
+                geometry Cylinder {
+                  height 0.02
+                  radius 0.04
+                }
+              }
+            ]
+          }
+        ]
+        name "solid(2)"
+        boundingObject DEF TRANSFORM_WHEEL_1 Transform {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.1 0.1 0.1
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.02
+                radius 0.04
+              }
+            }
+          ]
+        }
+        physics Physics {
+        }
+      }
+    }
+    DEF WHEEL_FR HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 0 1
+        anchor -0.06 0 -0.05
+        staticFriction 1
+      }
+      device [
+        RotationalMotor {
+          name "RM_FR"
+        }
+      ]
+      endPoint Solid {
+        translation -0.06 0 -0.05
+        rotation 1 0 0 1.5707963028204153
+        children [
+          USE TRANSFORM_WHEEL_1
+        ]
+        name "solid(1)"
+        boundingObject USE TRANSFORM_WHEEL_1
+        physics Physics {
+        }
+      }
+    }
+    DEF WHEEL_BL HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 0 1
+        anchor 0.06 0 0.05
+        staticFriction 1
+      }
+      device [
+        RotationalMotor {
+          name "RM_BL"
+        }
+      ]
+      endPoint Solid {
+        translation 0.06 0 0.05
+        rotation 1 0 0 1.5707963028204153
+        children [
+          USE TRANSFORM_WHEEL_1
+        ]
+        name "solid(3)"
+        boundingObject USE TRANSFORM_WHEEL_1
+        physics Physics {
+        }
+      }
+    }
+    DEF WHEEL_BR HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 0 1
+        anchor 0.06 0 -0.05
+        staticFriction 1
+      }
+      device [
+        RotationalMotor {
+          name "RM_BR"
+        }
+      ]
+      endPoint Solid {
+        translation 0.06 0 -0.05
+        rotation 1 0 0 1.5707963028204153
+        children [
+          USE TRANSFORM_WHEEL_1
+        ]
+        name "solid(4)"
+        boundingObject USE TRANSFORM_WHEEL_1
+        physics Physics {
+        }
+      }
+    }
+  ]
+  boundingObject USE ROBOT_BODY
+  physics Physics {
+  }
+  controller "Controller"
+}

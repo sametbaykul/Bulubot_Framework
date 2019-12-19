@@ -1,0 +1,5 @@
+#VRML_OBJ R2019a utf8
+DEF FLOOR Floor {
+  size 1.2 0.6
+  tileSize 0.3 0.3
+}

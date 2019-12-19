@@ -1,0 +1,55 @@
+#VRML_OBJ R2019a utf8
+DEF DUMBELL Solid {
+  translation 0.13183046457281677 0.03 -0.07154530117015753
+  rotation 0.7908522007883032 0.4327527103222437 -0.4327561532977314 1.8033177487343919
+  children [
+    DEF GROUP_Dumbell Group {
+      children [
+        Transform {
+          translation 0 -0.07 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Sphere {
+                radius 0.03
+                subdivision 2
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0.07 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Sphere {
+                radius 0.03
+                subdivision 2
+              }
+            }
+          ]
+        }
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry Cylinder {
+            height 0.1
+            radius 0.01
+          }
+        }
+      ]
+    }
+  ]
+  name "dumbell"
+  contactMaterial "dumbell"
+  boundingObject USE GROUP_Dumbell
+  physics Physics {
+    density -1
+    mass 2
+    centerOfMass [
+      0 0.01 0
+    ]
+  }
+}
